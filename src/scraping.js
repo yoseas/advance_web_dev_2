@@ -80,12 +80,13 @@ class Scraping extends Component {
           <h1>Webscrapping Berita Olahraga</h1>
           {this.state.data.map((data, i) => (
             <div key={i} className="card">
+              <img src={data.image} alt="img" className="image" />
               <h2>
                 <a className="title" href={data.link}>
                   {data.title}
                 </a>
               </h2>
-              <img src={data.image} alt="img" className="image" />
+              
               <p>{data.date}</p>
               <a href={data.source} className="source">
                 Source: {data.source.replace("https://", "")}
